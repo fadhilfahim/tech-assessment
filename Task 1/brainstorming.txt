@@ -1,0 +1,11 @@
+1. user send (query)
+2. Receive query 
+3. check query if needed to look data:
+    how? check for keywords that will need information,
+        if keyword available, then fetch details from DB
+        else just generate responce
+4. get answer from LLM
+    if info received from DB:
+        send info + query to llm to generate responce
+    else 
+        send query to llm to generate responce

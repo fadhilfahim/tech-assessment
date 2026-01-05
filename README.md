@@ -1,1 +1,2 @@
-# tech-assessment
+# Technical Assessment
+## Fadhil Fahim
