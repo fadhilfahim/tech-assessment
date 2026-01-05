@@ -41,19 +41,35 @@ def optimized_merge_list(Users: List[Dict], Scores: List[Dict]) -> List[Dict]:
         })
     return merged_list
 
+
+
 if __name__ == "__main__":
 
     # test
-    Users = [{ "user_ref": "ID_101", "name": "Alice" }, { "user_ref": "#102", "name": "Bob" }]
-    Scores = [{ "id": "101", "score": 88 }, { "id": "102", "score": 95 }]
-    # clean data
-    cleanUsers(Users)
-    # print("Cleaned Users:", Users)
+    # Users = [{ "user_ref": "ID_101", "name": "Alice" }, { "user_ref": "#102", "name": "Bob" }]
+    # Scores = [{ "id": "101", "score": 88 }, { "id": "102", "score": 95 }]
+   
+    Users = [
+        { "user_ref": "ID_101", "name": "Alice" },
+        { "user_ref": "#102", "name": "Bob" },
+        { "user_ref": "XYZ-103", "name": "Charlie" }  # missing score
+    ]
+    Scores = [
+        { "id": "101", "score": 88 },
+        { "id": "102", "score": 95 }
+    ]
 
-    # merge data
-    merged = merge_list(Users, Scores)
-    print("Merged List:", merged)
+    # # clean data
+    # cleanUsers(Users)
+    # # print("Cleaned Users:", Users)
 
-    # optimeze without modifying original list
+    # # merge data
+    # merged = merge_list(Users, Scores)
+    # print("Merged List:", merged)
+
+    """
+    Optimize the time complexity by not cleaning the list function separately and merging the two lists in a single flow
+    so we can avoid looping through the Users list multiple times.
+    """
+    # optimize without modifying original list
     print("Optimized Merged List:", optimized_merge_list(Users, Scores))
-    
