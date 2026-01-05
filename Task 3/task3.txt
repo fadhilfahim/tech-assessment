@@ -1,0 +1,17 @@
+Question:
+In Task 1, you created an "Abstract Base Class" for the Knowledge Retriever.
+Explain why this is useful in a production environment. If we decided to switch from Oracle
+23ai (which you used in your project) to a simple local JSON file for testing, how does your
+abstraction help us?
+
+Answer:
+Abstract base class is used to set a standard structure that all of its subclass are required to implement 
+so that it is consistant across all classes. It keeps all the logic the business logic, database, the llm 
+all loosely coupled, therefor they donot entangle with other classes and maitaines consitancy amonge all related classes
+
+It helps other developers to understand the functions, easy to loacte, modify and reuse code in cases where 
+same function is needed to be used in several places 
+
+if we need to switch to a json file we can create a new class for a local json file that inherits the Abstract class, and just 
+add its implementation, other classes dont need to be disturbed. It can seamlessly work for without needing to modify other codes
+ 

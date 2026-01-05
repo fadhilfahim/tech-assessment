@@ -46,19 +46,9 @@ def optimized_merge_list(Users: List[Dict], Scores: List[Dict]) -> List[Dict]:
 if __name__ == "__main__":
 
     # test
-    # Users = [{ "user_ref": "ID_101", "name": "Alice" }, { "user_ref": "#102", "name": "Bob" }]
-    # Scores = [{ "id": "101", "score": 88 }, { "id": "102", "score": 95 }]
+    Users = [{ "user_ref": "ID_101", "name": "Alice" }, { "user_ref": "#102", "name": "Bob" }]
+    Scores = [{ "id": "101", "score": 88 }, { "id": "102", "score": 95 }]
    
-    Users = [
-        { "user_ref": "ID_101", "name": "Alice" },
-        { "user_ref": "#102", "name": "Bob" },
-        { "user_ref": "XYZ-103", "name": "Charlie" }  # missing score
-    ]
-    Scores = [
-        { "id": "101", "score": 88 },
-        { "id": "102", "score": 95 }
-    ]
-
     # # clean data
     # cleanUsers(Users)
     # # print("Cleaned Users:", Users)
